@@ -1,0 +1,26 @@
+.app-search {
+    width: 45%;
+}
+
+.app-search__input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    width: 75%;
+    height: 30px;
+    margin: 0 auto;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: solid 0 white;
+}
+
+.app-search__button {
+    padding: 0 10px;
+    border: none;
+    height: 50px;
+    background-color: white;
+    border-left: solid 0 white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
