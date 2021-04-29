@@ -1,18 +1,16 @@
-import logo from './logo.svg'
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './AppHeader.css'
-import {SearchBar} from "../SearchBar/SearchBar";
+import HeaderNav from "./HeaderNav";
+import HeaderContent from "./HeaderContent";
 
 function AppHeader() {
     return (
-        <header className="app-header">
-            <img src={logo} alt="logo"/> Pexels
-            <SearchBar></SearchBar>
-            <a>Найти фото</a>
-            <a>Найти фото</a>
-            <a>Найти фото</a>
-            <a>...</a>
-            <button className='app-button'>Присоединиться</button>
+        <header className='app-header'>
+            <div className='header-background'>
+                <img src='img/pexels-photo-4334250.jpeg'/>
+            </div>
+            <HeaderNav/>
+            <HeaderContent/>
         </header>
     );
 }
