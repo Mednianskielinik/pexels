@@ -1,0 +1,12 @@
+.photos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+.photo-card {
+    width: 25%;
+    height: auto;
+    padding: 10px;
+}

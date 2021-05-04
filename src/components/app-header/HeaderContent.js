@@ -6,7 +6,7 @@ function HeaderContent() {
     return (
         <div className="header-content">
             <h1 className="header-content__title">Лучшие бесплатные стоковые фото и видео от талантливых авторов.</h1>
-            <SearchBar text = {'Ищите бесплатные фото и видео'}/>
+            <SearchBar text = {'Ищите бесплатные фото и видео'} width='650'/>
         </div>
     );
 }
