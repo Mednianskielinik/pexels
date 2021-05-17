@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import './SearchBar.css';
+import React, {useState} from 'react';
+import './searchBar.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import themesData from "../app-data/themesData";
@@ -7,12 +7,7 @@ import Themes from "./Themes";
 
 function SearchBar(props) {
     const [showThemes, setShowThemes] = useState(false)
-
     const themeItems = themesData.map(item => <Themes key={item.id} item={item}/>)
-    //
-    // function listenScrollEvent(e) {
-    //     console.log('testFocus')
-    // }
 
     return (
         <div className='app-search'>

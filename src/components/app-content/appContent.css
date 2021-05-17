@@ -48,6 +48,19 @@
 .photo-card_author {
     margin: 20px;
     width: auto;
+    display: inline-block;
+}
+
+.photo-card_actions {
+    margin: 20px;
+    width: auto;
+    float: right;
+    display: inline-block;
+}
+
+.action-button {
+    color: #e8e8e8;
+    margin: 10px;
 }
 
 .photo-card_author img {
@@ -56,4 +69,24 @@
     border-radius: 50%;
     text-indent: -9999px;
     z-index: 2;
+}
+
+.photo-card_author .name {
+    box-sizing: content-box;
+    max-width: calc(100% - 40px);
+    margin-right: 40px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #e8e8e8;
+}
+
+.like {
+    color: red;
+    position: absolute;
+    top: 100%;
+    margin-top: -55px;
+    right: 30px;
 }

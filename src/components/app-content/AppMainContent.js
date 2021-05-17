@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './AppContent.css'
+import './appContent.css'
 import ImageColumn from "./ImageColumn";
 import photoData from "../app-data/photoData";
 
@@ -31,8 +31,7 @@ function AppMainContent(props) {
         arrayIndex++;
     })
 
-    const imageColumns = columnImages.map(item => <ImageColumn images={item}/>)
-
+    const imageColumns = columnImages.map((item, index) => <ImageColumn key={index} images={item}/>)
 
     return (
         <div className='photos'>

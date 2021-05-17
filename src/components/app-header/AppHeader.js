@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './AppHeader.css'
+import './appHeader.css'
 import HeaderNav from "./HeaderNav";
 import HeaderContent from "./HeaderContent";
 
