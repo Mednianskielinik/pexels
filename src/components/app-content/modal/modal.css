@@ -67,3 +67,35 @@ figure {
 figure:hover img {
     opacity: 0;
 }
+
+.tooltip {
+    position: relative;
+    background: #ff0000;
+    text-align: right;
+    min-width: 45%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    float: right;
+    right: 20px;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    bottom: -19px;
+    right: 1px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ccc;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    bottom: -18px;
+    right: 2px;
+    border: 10px solid transparent;
+    border-top: 10px solid #ff0000;
+}
