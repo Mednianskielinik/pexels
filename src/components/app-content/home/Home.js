@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import './appContent.css'
-import ImageColumn from "./ImageColumn";
-import photoData from "../app-data/photoData";
+import '../appContent.css'
+import ImageColumn from "../ImageColumn";
+import photoData from "../../app-data/photoData";
+import HeaderContent from "../../app-header/HeaderContent";
 
-function AppMainContent(props) {
+function Home() {
     const [images, setImagesArray] = useState(photoData)
     let arrayIndex = 0;
-    let columnImages = [[],[],[]];
+    let columnImages = [[], [], []];
 
     if (!images.length) {
         fetch("https://api.pexels.com/v1/curated?per_page=290", {
@@ -34,10 +35,12 @@ function AppMainContent(props) {
     const imageColumns = columnImages.map((item, index) => <ImageColumn key={index} images={item}/>)
 
     return (
-        <div className='photos'>
-            {imageColumns}
+        <div className=''>
+            <div className='photos'>
+                {imageColumns}
+            </div>
         </div>
     );
 }
 
-export default AppMainContent;
+export default Home;

@@ -4,7 +4,7 @@ import {faDownload} from '@fortawesome/free-solid-svg-icons';
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons';
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
 import ImageModal from "./modal/ImageModal";
-import ImageTooltip from "./ImageTooltip";
+import ImageTooltip from "./tooltip/ImageTooltip";
 
 function ImageCard(props) {
     const [like, setLike] = useState(false)
@@ -43,18 +43,19 @@ function ImageCard(props) {
         })
     });
     return (
-        <div>
+        <div style={{position: 'relative'}}>
             <a className='photo-card'>
                 <img onClick={() => {
                     showModal(true);
                 }} className='photo-card_image' src={props.item.src.large}/>
                 <div className='photo-card_overlay'>
-                    <div className='photo-card_author' onMouseOver={() => showTooltip(true)}
-                         onMouseOut={() => showTooltip(false)}>
+                    <div className='photo-card_author' onMouseEnter={() => showTooltip(true)}
+                         onMouseLeave={() => showTooltip(false)}>
                         <img className="photo-item__avatar" height="30" width="30" role="presentation"
                              data-overview-tooltip-pointer-element="true"
                              src="https://images.pexels.com/users/avatars/13144405/mathilde-langevin-119.png?auto=compress&amp;fit=crop&amp;h=60&amp;w=60"/>
                         <span className='name'>{props.item.photographer}</span>
+                        {tooltip ? <ImageTooltip coordinateX = {tooltipX} coordinateY = {tooltipY} key={props.item.id}/> : ''}
                     </div>
                     <div className='photo-card_actions'>
                         <span className='action-button'><FontAwesomeIcon icon={faDownload}/></span>
@@ -66,7 +67,6 @@ function ImageCard(props) {
                 </div>
                 {like ? <span className='like'><FontAwesomeIcon icon={faHeart}/></span> : ''}
             </a>
-            {tooltip ? <ImageTooltip coordinateX = {tooltipX} coordinateY = {tooltipY} key={props.item.id}/> : ''}
             <ImageModal img={props.item.src} onClose={() => showModal(!modal)} show={modal}/>
         </div>
     );

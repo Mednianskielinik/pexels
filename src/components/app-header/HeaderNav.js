@@ -1,9 +1,10 @@
-import './AppHeader.css';
+import './appHeader.css';
 import React, {useState, useEffect} from 'react';
 import HeaderLogo from "./HeaderLogo";
 import SearchBar from "../search-bar/SearchBar";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEllipsisH} from '@fortawesome/free-solid-svg-icons'
+import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
+
 
 function HeaderNav() {
     const [navType, setNavType] = useState('nav_default');
@@ -25,11 +26,13 @@ function HeaderNav() {
 
     return (
         <div className={navType + " app-nav"}>
-            <HeaderLogo/>
+            <a href="/home"><HeaderLogo/></a>
             <SearchBar hide={hideSearch} width='647' text='Поиск бесплатных изображений'/>
-            <a>Найти фото</a>
-            <a>Лицензия</a>
-            <a>Загрузить</a>
+            <nav>
+                <a href="/search">Найти фото</a>
+                <a href="/narwhal">Лицензия</a>
+                <a href="/whale">Загрузить</a>
+            </nav>
             <a><FontAwesomeIcon icon={faEllipsisH}/></a>
             <button className='app-button'>Присоединиться</button>
         </div>

@@ -1,5 +1,5 @@
-import './AppHeader.css';
-import React, {useState, useEffect} from 'react';
+import './appHeader.css'
+import React from 'react';
 import SearchBar from "../search-bar/SearchBar";
 
 function HeaderContent() {

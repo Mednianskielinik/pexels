@@ -1,4 +1,4 @@
-import './AppHeader.css';
+import './appHeader.css';
 import React from 'react';
 
 function HeaderLogo() {

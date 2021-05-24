@@ -1,0 +1,132 @@
+.tooltip {
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    text-align: left;
+    min-width: 45%;
+    padding: 15px 15px;
+    border-radius: 3px;
+    border: 1px solid #ffffff;
+    right: 20px;
+    width: 80%;
+}
+
+.tooltip-top-left {
+    left: -76%;
+    bottom: 63px;
+}
+.tooltip-top-right {
+    left: 18px;
+    bottom: 63px;
+}
+
+.tooltip-bottom-left {
+    left: -76%;
+    bottom: -75px;
+}
+
+.tooltip-bottom-right {
+    left: 18px;
+    bottom: -75px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    visibility: visible;
+    border: 10px solid transparent;
+    border-top: 10px solid #ffffff;
+}
+
+.tooltip-bottom-left::after {
+    top: -19px;
+    right: 6px;
+    transform: rotate(180deg);
+}
+
+.tooltip-bottom-right::after {
+    top: -19px;
+    left: 6px;
+    transform: rotate(180deg);
+}
+
+.tooltip-top-left::after {
+    bottom: -19px;
+    right: 6px;
+}
+
+.tooltip-top-right::after {
+    bottom: -19px;
+    left: 6px;
+}
+
+.author {
+    text-align: left;
+    width: auto;
+    display: inline-block;
+}
+
+.author img {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    text-indent: -9999px;
+    z-index: 2;
+}
+
+.author .info{
+    box-sizing: content-box;
+    max-width: calc(100% - 40px);
+    margin-right: 40px;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #1a1a1a;
+}
+
+.info .name{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+    margin-left: 0;
+    color: #1a1a1a;
+}
+
+.info .followers {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.follow-button {
+    background: #05a081;
+    color: #fff;
+    border-color: #05a081;
+    line-height: 1;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 11px 24px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+}
+
+.follow-button:hover {
+    background-color: #1aad83;
+}

@@ -110,3 +110,12 @@
     margin-bottom: 15px;
 }
 
+.app-nav a {
+    text-decoration: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+}
+
