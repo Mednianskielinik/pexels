@@ -6,12 +6,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
 
 
-function HeaderNav() {
-    const [navType, setNavType] = useState('nav_default');
-    const [hideSearch, setHideSearch] = useState(true)
+function HeaderNav(props) {
+    const [navType, setNavType] = useState(props.showSearch ? 'nav_colored' : 'nav_default');
+    const [hideSearch, setHideSearch] = useState(props.showSearch)
 
     function listenScrollEvent(e) {
-        if (window.scrollY > 200) {
+        if (window.scrollY > 100) {
             setNavType('nav_colored');
             setHideSearch(false);
         } else {

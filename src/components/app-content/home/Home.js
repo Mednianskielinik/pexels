@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import '../appContent.css'
 import ImageColumn from "../ImageColumn";
 import photoData from "../../app-data/photoData";
-import HeaderContent from "../../app-header/HeaderContent";
 
 function Home() {
     const [images, setImagesArray] = useState(photoData)
