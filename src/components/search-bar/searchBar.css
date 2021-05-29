@@ -26,7 +26,6 @@
     border: none;
     height: 50px;
     width: 53px;
-    margin-top: -10px;
     background-color: white;
     border-left: solid 0 white;
     border-top-right-radius: 5px;
@@ -55,7 +54,7 @@
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 3px 5px 0 rgb(0 0 0 / 8%);
-    color: #5e5e5e;
+    color: #5e5e5e !important;
     padding: .4rem;
     padding-right: 1.85rem;
     text-decoration: none;

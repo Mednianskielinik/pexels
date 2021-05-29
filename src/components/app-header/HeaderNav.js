@@ -8,7 +8,7 @@ import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
 
 function HeaderNav(props) {
     const [navType, setNavType] = useState(props.showSearch ? 'nav_colored' : 'nav_default');
-    const [hideSearch, setHideSearch] = useState(props.showSearch)
+    const [hideSearch, setHideSearch] = useState(!props.showSearch)
 
     function listenScrollEvent(e) {
         if (window.scrollY > 100) {
@@ -25,17 +25,15 @@ function HeaderNav(props) {
     });
 
     return (
-        <div className={navType + " app-nav"}>
+        <nav className={navType + " app-nav"}>
             <a href="/home"><HeaderLogo/></a>
             <SearchBar hide={hideSearch} width='647' text='Поиск бесплатных изображений'/>
-            <nav>
-                <a href="/search">Найти фото</a>
-                <a href="/narwhal">Лицензия</a>
-                <a href="/whale">Загрузить</a>
-            </nav>
+            <a href="/search">Найти фото</a>
+            <a href="/narwhal">Лицензия</a>
+            <a href="/whale">Загрузить</a>
             <a><FontAwesomeIcon icon={faEllipsisH}/></a>
             <button className='app-button'>Присоединиться</button>
-        </div>
+        </nav>
     );
 }
 

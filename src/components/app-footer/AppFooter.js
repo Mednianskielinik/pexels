@@ -1,9 +1,10 @@
 import React from 'react';
+import './appFooter.css'
 
 function AppFooter() {
     return (
         <footer>
-            <h1>FOOTEr</h1>
+            <a href="/home"><span className={'align-right'}>Back to Pexels</span></a>
         </footer>
     );
 }

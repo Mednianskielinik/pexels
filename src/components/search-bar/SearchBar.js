@@ -11,13 +11,13 @@ function SearchBar(props) {
 
     return (
         <div className='app-search'>
-            <div style={{display: props.hide ? 'none' : 'block', width: props.width + 'px'}}>
+            <div style={{display: props.hide ? 'none' : 'flex', width: props.width + 'px'}}>
                 <input onBlur={() => setShowThemes(false)} onFocus={() => setShowThemes(true)} placeholder={props.text} className='app-search__input'
                        style={{width: (props.width - 70) + 'px'}}/>
                 <button className="app-search__button"><FontAwesomeIcon icon={faSearch}/></button>
             </div>
             <div className='app-search__themes'
-                 style={{display: showThemes ? 'block' : 'none', width: props.width - 30 + 'px'}}>
+                 style={{display: showThemes ? 'flex' : 'none', width: props.width - 30 + 'px'}}>
                 <div className='themes-title'>Популярные темы</div>
                 <div className='themes-content'>{themeItems}</div>
             </div>

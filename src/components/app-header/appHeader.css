@@ -13,7 +13,6 @@
     padding-left: 1em;
     padding-right: 1em;
     font-size: 17px;
-    line-height: 100;
 }
 
 .app-header {
@@ -74,6 +73,7 @@
     padding-right: 1em;
     color: #fff;
     font-weight: 400;
+    display: inline-flex;
     font-size: 17px;
 }
 
@@ -99,7 +99,7 @@
     -webkit-box-align: center;
     align-items: center;
     padding: 1.25rem;
-    color: #1a1a1a;
+    color: #5e5e5e;
     text-decoration: none;
     position: relative;
     cursor: pointer;

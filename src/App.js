@@ -14,13 +14,13 @@ function App() {
             <BrowserRouter>
                 <Switch>
                     <Route path="/home">
-                        <AppHeader/>
+                        <AppHeader showSearch={false}/>
                         <HomeBanner/>
                         <SecondNav active={'home'}/>
                         <Home/>
                     </Route>
                     <Route path="/search">
-                        <AppHeader />
+                        <AppHeader showSearch={true}/>
                         <SecondNav active={'search'}/>
                         <Search/>
                     </Route>
