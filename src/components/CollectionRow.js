@@ -1,5 +1,4 @@
 import React from 'react';
-import './collections.css';
 import CollectionNames from "./CollectionNames";
 import Collection from "./Collection";
 

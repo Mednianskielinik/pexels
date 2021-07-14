@@ -1,9 +1,8 @@
 import React from 'react';
-import './searchBar.css';
 
 function Themes(props) {
     return (
-        <a className='theme'>
+        <a href={"/search/"+props.item.title} className='theme'>
             <img className='theme-image' src={props.item.image}/>
             <div className='theme-name'>
                 {props.item.title}

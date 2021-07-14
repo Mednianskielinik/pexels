@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import '../appContent.css';
+import React from 'react';
 
 function Collection(props) {
 

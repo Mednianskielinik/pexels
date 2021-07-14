@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import ReactImageMagnify from "react-image-magnify";
-import './modal.css'
 
 function ImageModal(props) {
     if (!props.show) {

@@ -1,7 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import '../appContent.css'
-import ImageColumn from "../ImageColumn";
-import photoData from "../../app-data/photoData";
+import React, {useState} from 'react';
+import AppHeader from "../components/AppHeader";
+import HomeBanner from "../components/HomeBanner";
+import SecondNav from "../components/SecondNav";
+import ImageColumn from "../components/ImageColumn";
+import photoData from "../components/app-data/photoData";
 
 function Home() {
     const [images, setImagesArray] = useState(photoData)
@@ -34,11 +36,14 @@ function Home() {
     const imageColumns = columnImages.map((item, index) => <ImageColumn key={index} images={item}/>)
 
     return (
-        <div className=''>
+        <>
+            <AppHeader showSearch={false}/>
+            <HomeBanner/>
+            <SecondNav active={'home'}/>
             <div className='photos'>
                 {imageColumns}
             </div>
-        </div>
+        </>
     );
 }
 

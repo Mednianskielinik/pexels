@@ -1,5 +1,4 @@
 import React from 'react';
-import './appFooter.css'
 
 function AppFooter() {
     return (

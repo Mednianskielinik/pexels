@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import '../appContent.css';
+import React from 'react';
 
 function CollectionNames(props) {
     return (
         <li>
-            <a>{props.name}</a>
+            <a href={"/search/"+props.name}>{props.name}</a>
         </li>
     );
 }

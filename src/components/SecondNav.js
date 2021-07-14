@@ -1,4 +1,3 @@
-import './appHeader.css';
 import React, {useState, useEffect} from 'react';
 
 function SecondNav(props) {

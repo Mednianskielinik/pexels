@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react';
-import './tooltip.css';
-import photoData from "../../app-data/photoData";
+import React from 'react';
+import photoData from "./app-data/photoData";
 
 function ImageTooltip(props) {
     var className = 'tooltip';

@@ -3,8 +3,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDownload} from '@fortawesome/free-solid-svg-icons';
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons';
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
-import ImageModal from "./modal/ImageModal";
-import ImageTooltip from "./tooltip/ImageTooltip";
+import ImageModal from "./ImageModal";
+import ImageTooltip from "./ImageTooltip";
 
 function ImageCard(props) {
     const [like, setLike] = useState(false)

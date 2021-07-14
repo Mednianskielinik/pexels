@@ -1,7 +1,6 @@
-import './appHeader.css';
 import React, {useState, useEffect} from 'react';
 import HeaderLogo from "./HeaderLogo";
-import SearchBar from "../search-bar/SearchBar";
+import SearchBar from "./SearchBar";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEllipsisH} from '@fortawesome/free-solid-svg-icons';
 
@@ -11,7 +10,7 @@ function HeaderNav(props) {
     const [hideSearch, setHideSearch] = useState(!props.showSearch)
 
     function listenScrollEvent(e) {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 100 || props.showSearch) {
             setNavType('nav_colored');
             setHideSearch(false);
         } else {
@@ -27,7 +26,7 @@ function HeaderNav(props) {
     return (
         <nav className={navType + " app-nav"}>
             <a href="/home"><HeaderLogo/></a>
-            <SearchBar hide={hideSearch} width='647' text='Поиск бесплатных изображений'/>
+            <SearchBar hide={hideSearch} searchText={props.searchText} width='647' text='Поиск бесплатных изображений'/>
             <a href="/search">Найти фото</a>
             <a href="/narwhal">Лицензия</a>
             <a href="/whale">Загрузить</a>

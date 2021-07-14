@@ -1,28 +1,27 @@
 import React from 'react';
 import './App.css';
-import AppFooter from "./components/app-footer/AppFooter";
-import AppHeader from "./components/app-header/AppHeader";
+import AppFooter from "./components/AppFooter";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import HomeBanner from "./components/app-content/home/HomeBanner";
-import SecondNav from "./components/app-header/SecondNav";
-import Home from "./components/app-content/home/Home";
-import Search from "./components/app-content/search/Search";
+import Home from "./pages/Home";
+import Search from "./pages/Search";
+import Discover from "./pages/Discover";
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
                 <Switch>
-                    <Route path="/home">
-                        <AppHeader showSearch={false}/>
-                        <HomeBanner/>
-                        <SecondNav active={'home'}/>
+                    <Route exact path="/">
                         <Home/>
                     </Route>
-                    <Route path="/search">
-                        <AppHeader showSearch={true}/>
-                        <SecondNav active={'search'}/>
-                        <Search/>
+                    <Route path="/home">
+                        <Home/>
+                    </Route>
+                    <Route exact path="/search">
+                        <Discover/>
+                    </Route>
+                    <Route path="/search/:collection">
+                       <Search/>
                     </Route>
                 </Switch>
             </BrowserRouter>

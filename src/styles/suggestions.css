@@ -1,0 +1,47 @@
+.suggestions {
+    margin: auto;
+    max-width: 1400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.suggestions::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.theme {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 700;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-flex;
+    padding: .35rem;
+    padding-right: 1.25rem;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+    color: #5e5e5e;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .1s all ease;
+}
+
+.theme-image {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: .75rem;
+    background-position: center;
+    background-size: cover;
+}

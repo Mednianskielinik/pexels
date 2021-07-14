@@ -48,6 +48,21 @@ const themesData = [
         "id": "11",
         "title": "Стол",
         "image": 'https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&crop=entropy&cs=tinysrgb&dpr=1&fit=crop&h=50&w=50',
+    },
+    {
+        "id": "12",
+        "title": "Идея",
+        "image": 'https://images.pexels.com/photos/355952/pexels-photo-355952.jpeg?auto=compress&crop=entropy&cs=tinysrgb&dpr=1&fit=crop&h=50&w=50',
+    },
+    {
+        "id": "13",
+        "title": "Радуга",
+        "image": 'https://images.pexels.com/photos/4611794/pexels-photo-4611794.jpeg?auto=compress&crop=entropy&cs=tinysrgb&dpr=1&fit=crop&h=50&w=50',
+    },
+    {
+        "id": "14",
+        "title": "Стол",
+        "image": 'https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&crop=entropy&cs=tinysrgb&dpr=1&fit=crop&h=50&w=50',
     }
 ]
 
